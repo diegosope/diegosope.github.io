@@ -105,7 +105,7 @@ window.cookieconsent.initialise({
 </script>
 
 <script>
-  const logo = document.getElementById("logo");
+  const RA = document.getElementById("RA");
 let currentIndex = 0;
 const keySequence = [
   "ArrowUp",
@@ -129,6 +129,33 @@ document.addEventListener("keydown", (event) => {
     }
   } else {
     currentIndex = 0;
+  }
+});
+
+const JO = document.getElementById("JO");
+let currentIndexJO = 0;
+const keySequenceJO = [
+  "KeyJ",
+  "KeyO",
+  "KeyJ",
+  "KeyO",
+  "KeyJ",
+  "KeyO",
+  "KeyJ",
+  "KeyO",
+  "KeyJ",
+  "KeyO",
+];
+
+document.addEventListener("keydown", (event) => {
+  if (event.code === keySequenceJO[currentIndexJO]) {
+    currentIndexJO++;
+    if (currentIndexJO === keySequenceJO.length) {
+      window.open("https://i.imgur.com/91hPUmI.jpg", '_blank');
+      currentIndexJO = 0;
+    }
+  } else {
+    currentIndexJO = 0;
   }
 });
 </script>
