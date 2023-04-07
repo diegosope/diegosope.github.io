@@ -103,5 +103,34 @@ window.cookieconsent.initialise({
   "type": "opt-out"
 });
 </script>
+
+<script>
+  const logo = document.getElementById("logo");
+let currentIndex = 0;
+const keySequence = [
+  "ArrowUp",
+  "ArrowUp",
+  "ArrowDown",
+  "ArrowDown",
+  "ArrowLeft",
+  "ArrowRight",
+  "ArrowLeft",
+  "ArrowRight",
+  "KeyB",
+  "KeyA",
+];
+
+document.addEventListener("keydown", (event) => {
+  if (event.code === keySequence[currentIndex]) {
+    currentIndex++;
+    if (currentIndex === keySequence.length) {
+      window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", '_blank');
+      currentIndex = 0;
+    }
+  } else {
+    currentIndex = 0;
+  }
+});
+</script>
   </body>
 </html>
